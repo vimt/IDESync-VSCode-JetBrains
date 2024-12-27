@@ -37,8 +37,8 @@ The User may not:
 - Any updates provided will be governed by this EULA unless accompanied by a separate agreement.
 
 9. Governing Law
-- This agreement is governed by the laws of [Your Country/State].
-- Any disputes arising under this agreement shall be resolved in the courts of [Your Country/State].
+- This agreement is governed by the laws of Germany.
+- Any disputes arising under this agreement shall be resolved in the courts of Germany.
 
 10. Relationship with Microsoft (Visual Studio Code)
 - Microsoft is not a party to this EULA and has no obligations or liabilities related to the Software.
