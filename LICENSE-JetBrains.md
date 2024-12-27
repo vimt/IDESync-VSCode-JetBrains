@@ -1,4 +1,4 @@
-EULA
+'IDESync - Conntect to VSCode' - End-User License Agreement (EULA)
 
 This Standard EULA is concluded between You and the Developer with respect to the 'IDESync - Connect to VSCode' Plugin.
 
@@ -21,15 +21,15 @@ This Standard EULA is concluded between You and the Developer with respect to th
 2. Grant of License
 
 2.1 License. The Developer hereby grants You a limited, worldwide, non-exclusive, non-transferable license to use the Plugin (including any generally available updates and upgrades released during your rightful use of the Plugin) as long as the use is in line with Your Confirmation, the Documentation, and the limits set out in this Standard EULA. You may:
-	•	Install the Plugin;
-	•	Use the Plugin subject to the limits described in Your Confirmation (if any);
-	•	Make backup copies of the Plugin for archival purposes.
+- Install the Plugin;
+- Use the Plugin subject to the limits described in Your Confirmation (if any);
+- Make backup copies of the Plugin for archival purposes.
 
 2.2 Restrictions. You may not modify, reverse-engineer, decompile, or disassemble the Plugin in whole or in part, or create any derivative works from the Plugin, or sublicense any rights to the Plugin, unless otherwise expressly authorized in writing by the Developer.
 
 2.3 Duration of License. The license granted under this Standard EULA can be provided as:
-	•	Perpetual in case of Free Plugins or Paid Plugins for which You are charged a one-time license fee; and
-	•	Time-limited for the duration of your Subscription Period, in case of Paid Plugins for which You pay an annual or monthly Subscription fee.
+- Perpetual in case of Free Plugins or Paid Plugins for which You are charged a one-time license fee; and
+- Time-limited for the duration of your Subscription Period, in case of Paid Plugins for which You pay an annual or monthly Subscription fee.
 For more details about the type of Paid Plugin, see the information in Your Confirmation.
 
 3. Subscription and Future Payment
