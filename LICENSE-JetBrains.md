@@ -1,4 +1,4 @@
-'IDESync - Conntect to VSCode' - End-User License Agreement (EULA)
+'IDESync - Connect to VSCode' - End-User License Agreement (EULA)
 
 This Standard EULA is concluded between You and the Developer with respect to the 'IDESync - Connect to VSCode' Plugin.
 
