@@ -1,8 +1,8 @@
-'IDESync - Connect to JetBrains IDE' - End-User License Agreement (EULA)
+'IDE Sync - Connect to JetBrains IDE' - End-User License Agreement (EULA)
 
 1. Introduction
 
-This End-User License Agreement (“EULA”) is a legal agreement between you (“the User”) and Denis Alber (“the Licensor”) regarding the use of the 'IDESync - Connect to JetBrains IDE' (“the Software”). This EULA applies solely to the Software distributed via the Visual Studio Code Marketplace.
+This End-User License Agreement (“EULA”) is a legal agreement between you (“the User”) and Denis Alber (“the Licensor”) regarding the use of the 'IDE Sync - Connect to JetBrains IDE' (“the Software”). This EULA applies solely to the Software distributed via the Visual Studio Code Marketplace.
 
 2. License Grant
 - The Licensor grants the User a limited, non-exclusive, non-transferable, revocable license to use the Software, subject to the terms of this EULA.
