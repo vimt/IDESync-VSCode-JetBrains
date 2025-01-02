@@ -1,12 +1,12 @@
-'IDESync - Connect to VSCode' - End-User License Agreement (EULA)
+'IDE Sync - Connect to VSCode' - End-User License Agreement (EULA)
 
-This Standard EULA is concluded between You and the Developer with respect to the 'IDESync - Connect to VSCode' Plugin.
+This Standard EULA is concluded between You and the Developer with respect to the 'IDE Sync - Connect to VSCode' Plugin.
 
 1. Definitions
 
 “Confirmation” means an email from the Developer confirming Your rights to use the Plugin and containing important information about Your license.
 
-“Developer” means the author of 'IDESync - Connect to VSCode' Denis Alber.
+“Developer” means the author of 'IDE Sync - Connect to VSCode' Denis Alber.
 
 “Documentation” means the latest versions of all online technical documentation available for the Plugin and any other relevant Plugin documentation provided either by the Developer or any relevant third parties.
 
