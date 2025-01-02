@@ -7,14 +7,14 @@ A synchronization system that allows seamless switching between VSCode and JetBr
 ## Installation via Marketplace
 
 ### VSCode Extension
-Install directly from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=DenisBalber.vscode-jetbrains-sync)
+Install directly from the [Visual Studio Code Marketplace]([https://marketplace.visualstudio.com/items?itemName=DenisBalber.vscode-jetbrains-sync](https://marketplace.visualstudio.com/items?itemName=denisbalber.vscode-jetbrains-sync))
 - Open VSCode
 - Go to Extensions (Ctrl+Shift+X)
 - Search for "IDE Sync - Connect to JetBrains IDE"
 - Click Install
 
 ### JetBrains IDE Plugin
-Install directly from the [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/23822-vscode-jetbrains-sync)
+Install directly from the [JetBrains Marketplace]([https://plugins.jetbrains.com/plugin/23822-vscode-jetbrains-sync](https://plugins.jetbrains.com/plugin/26201-ide-sync--connect-to-vscode))
 - Open JetBrains IDE
 - Go to Settings > Plugins
 - Search for "IDE Sync - Connec to VSCode"
