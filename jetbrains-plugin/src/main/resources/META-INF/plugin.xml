@@ -52,30 +52,13 @@
         <h3>Feedback & Issues</h3>
         <p>Please report issues or suggestions on <a href="https://github.com/denisbalber/IDESync-VSCode-JetBrains/issues">GitHub</a>.</p>
     ]]></description>
-<!--    <tags>-->
-<!--        <tag>VSCode</tag>-->
-<!--        <tag>sync</tag>-->
-<!--        <tag>synchronization</tag>-->
-<!--        <tag>editor</tag>-->
-<!--        <tag>connection</tag>-->
-<!--        <tag>bridge</tag>-->
-<!--        <tag>Rider</tag>-->
-<!--        <tag>vscode-jetbrains-sync</tag>-->
-<!--        <tag>IDE</tag>-->
-<!--        <tag>IDE sync</tag>-->
-<!--        <tag>Visual Studio Code</tag>-->
-<!--        <tag>Cursor</tag>-->
-<!--        <tag>Windsurf</tag>-->
-<!--        <tag>IntelliJ</tag>-->
-<!--        <tag>IntelliJ IDEA</tag>-->
-<!--        <tag>WebStorm</tag>-->
-<!--        <tag>JetBrains IDE</tag>-->
-<!--        <tag>IDE Sync - Connect to JetBrains</tag>-->
-<!--        <tag>IDE Sync - Connect to JetBrains IDE</tag>-->
-<!--        <tag>IDE Sync - Connect to VSCode</tag>-->
-<!--    </tags>-->
     <depends>com.intellij.modules.platform</depends>
-
+    <change-notes><![CDATA[
+        <h3>Version 1.0.18</h3>
+        <ul>
+            <li>Files in the VSCode extension now always open in non-preview mode</li>
+        </ul>
+    ]]></change-notes>
     <extensions defaultExtensionNs="com.intellij">
         <postStartupActivity implementation="com.vscode.jetbrainssync.VSCodeJetBrainsSyncPlugin"/>
         <projectConfigurable
