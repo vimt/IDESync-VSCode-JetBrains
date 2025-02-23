@@ -1,0 +1,89 @@
+<idea-plugin require-restart="false">
+    <id>com.vscode.jetbrainssync</id>
+    <name>IDE Sync - Connect to VSCode</name>
+    <vendor>denisbalber</vendor>
+    <description><![CDATA[
+        <h2>IDE Sync - VSCode-JetBrains Sync</h2>
+        <p>Synchronizes a JetBrains IDE with a Visual Studio Code IDE, enabling seamless navigation between both editors. </p>
+        <p>This synchronization system is suitable for VSCode, VSCode forks like Cursor or Windsurf as well as JetBrains IntelliJ-based IDEs like Rider, IntelliJ IDEA, and WebStorm.</p>
+
+        <h3>Features</h3>
+        <ul>
+            <li>Automatic cursor position synchronization</li>
+            <li>Automatic active file synchronization</li>
+            <li>Easy configuration through settings</li>
+        </ul>
+
+        <h3>Installation</h3>
+        <ol>
+            <li>Install the JetBrains plugin in JetBrains IDE called "IDE Sync - Connect to VSCode"</li>
+            <li>Install the corresponding VS Code extension called "IDE Sync - Connect to JetBrains IDE"</li>
+        </ol>
+
+        <h3>Usage</h3>
+        <ol>
+            <li>After installation, you'll find a toggle button in the JetBrains IDE status bar</li>
+            <li>Click the button to enable/disable synchronization</li>
+            <li>The button shows the current status:
+                <ul>
+                    <li>"Turn IDE Sync On" - Sync disabled</li>
+                    <li>"IDE Sync On" - Sync enabled</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Configuration</h3>
+        <p>You can adjust the WebSocket port in the settings:</p>
+        <ul>
+            <li>Open JetBrains IDE settings</li>
+            <li>Search for "IDE Sync - Connect to VSCode"</li>
+            <li>Adjust the port (default: 3000)</li>
+        </ul>
+
+        <h3>Troubleshooting</h3>
+        <p>If you can't establish a connection:</p>
+        <ul>
+            <li>Make sure both plugins are installed</li>
+            <li>Check if the IDE Sync is turned on in both IDEs</li>
+            <li>Verify that the port settings match in both plugins</li>
+            <li>Restart both editors</li>
+        </ul>
+
+        <h3>Feedback & Issues</h3>
+        <p>Please report issues or suggestions on <a href="https://github.com/denisbalber/IDESync-VSCode-JetBrains/issues">GitHub</a>.</p>
+    ]]></description>
+<!--    <tags>-->
+<!--        <tag>VSCode</tag>-->
+<!--        <tag>sync</tag>-->
+<!--        <tag>synchronization</tag>-->
+<!--        <tag>editor</tag>-->
+<!--        <tag>connection</tag>-->
+<!--        <tag>bridge</tag>-->
+<!--        <tag>Rider</tag>-->
+<!--        <tag>vscode-jetbrains-sync</tag>-->
+<!--        <tag>IDE</tag>-->
+<!--        <tag>IDE sync</tag>-->
+<!--        <tag>Visual Studio Code</tag>-->
+<!--        <tag>Cursor</tag>-->
+<!--        <tag>Windsurf</tag>-->
+<!--        <tag>IntelliJ</tag>-->
+<!--        <tag>IntelliJ IDEA</tag>-->
+<!--        <tag>WebStorm</tag>-->
+<!--        <tag>JetBrains IDE</tag>-->
+<!--        <tag>IDE Sync - Connect to JetBrains</tag>-->
+<!--        <tag>IDE Sync - Connect to JetBrains IDE</tag>-->
+<!--        <tag>IDE Sync - Connect to VSCode</tag>-->
+<!--    </tags>-->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.vscode.jetbrainssync.VSCodeJetBrainsSyncPlugin"/>
+        <projectConfigurable
+            instance="com.vscode.jetbrainssync.VSCodeJetBrainsSyncConfigurable"
+            displayName="IDE Sync - Connect to VSCode"
+            id="com.vscode.jetbrainssync.settings"
+            parentId="tools"/>
+        <notificationGroup id="VSCode JetBrains Sync" displayType="BALLOON"/>
+        <statusBarWidgetFactory id="VSCodeJetBrainsSync" implementation="com.vscode.jetbrainssync.SyncStatusBarWidgetFactory"/>
+    </extensions>
+</idea-plugin> 

@@ -1,6 +1,6 @@
 # IDE Sync - VSCode-JetBrains IDE Sync
 
->**Note:** This synchronization system is suitable for VSCode, VSCode forks like Cursor or Windsurf as well as JetBrains IntelliJ-based IDEs like Rider, IntelliJ IDEA, and WebStorm.
+>**Note:** This synchronization system is suitable for VSCode, VSCode forks like Cursor or Windsurf as well as JetBrains IntelliJ-based IDEs like Rider, IntelliJ IDEA and WebStorm.
 
 A synchronization system that allows seamless switching between VSCode and JetBrains IntelliJ-based IDEs while maintaining the current file and cursor position.
 
@@ -50,9 +50,51 @@ The default port is 3000, this can be changed in the respective settings and mus
 ## Components
 
 ### VSCode Extension
+- Located in `/vscode-extension`
 - Monitors current file and cursor position in VSCode
 - Communicates with JetBrains plugin via WebSocket
 
 ### JetBrains IDE Plugin
+- Located in `/jetbrains-plugin`
 - Monitors current file and cursor position in JetBrains IDE
 - Communicates with VSCode extension via WebSocket
+
+## Building
+
+### Prerequisites
+- Node.js and npm for VSCode extension
+- JDK 17+ and Gradle for JetBrains IDE plugin
+
+### Build Steps
+
+1. Clone the repository
+```bash
+git clone https://github.com/denisbalber/IDESync-VSCode-JetBrains.git
+cd IDESync-VSCode-JetBrains
+```
+
+2. Build VSCode extension
+```bash
+cd vscode-extension
+npm install
+npm run build
+npm run package
+cd ..
+```
+
+3. Build JetBrains plugin
+```bash
+cd jetbrains-plugin
+./gradlew buildPlugin
+cd ..
+```
+
+## Installation
+
+### VSCode Extension
+1. Install the VSCode extension: `Ctrl+Shift+P` > `Extensions: Install from VSIX...` > Select `IDESync-VSCode-JetBrains/vscode-extension/vscode-jetbrains-sync-0.1.0.vsix`
+2. Restart VSCode
+
+### JetBrains IDE Plugin
+1. Install the JetBrains IDE plugin: `Settings` > `Plugins` > `Manage Repositories,... (Settings symbol)` > `Install Plugin from Disk...` > Select  `IDESync-VSCode-JetBrains/jetbrains-plugin/build/distributions/vscode-jetbrains-sync-1.0.0`
+2. Restart JetBrains IDE
