@@ -21,6 +21,7 @@ import org.java_websocket.client.WebSocketClient
 import org.java_websocket.handshake.ServerHandshake
 import java.io.File
 import java.net.URI
+import java.util.concurrent.atomic.AtomicLong
 
 data class EditorState(
     val filePath: String,
@@ -40,6 +41,7 @@ class VSCodeJetBrainsSyncService(private val project: Project) {
     private var autoReconnect = false
     private val gson = Gson()
     private var log: Logger = Logger.getInstance(VSCodeJetBrainsSyncService::class.java)
+    private val lastSendTime = AtomicLong(0)
 
     init {
         log.info("Initializing VSCodeJetBrainsSyncService")
@@ -313,8 +315,14 @@ class VSCodeJetBrainsSyncService(private val project: Project) {
                 if (client.isOpen) {
                     // Only send updates if we're active
                     if (isActive) {
-                        log.info("Sending state update (JetBrains is active): ${gson.toJson(state)}")
-                        client.send(gson.toJson(state))
+                        val now = System.currentTimeMillis()
+                        if (now - lastSendTime.get() >= 1000) {
+                            log.info("Sending state update (JetBrains is active - throttled): ${gson.toJson(state)}")
+                            client.send(gson.toJson(state))
+                            lastSendTime.set(now)
+                        } else {
+                            log.info("Skipping state update (JetBrains is active - throttled)")
+                        }
                     } else {
                         log.info("Skipping state update (JetBrains is not active)")
                     }

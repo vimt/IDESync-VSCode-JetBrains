@@ -18,6 +18,7 @@ export class VSCodeJetBrainsSync {
     private statusBarItem: vscode.StatusBarItem;
     private isConnected: boolean = false;
     private autoReconnect: boolean = false;
+    private lastSendTime: number = 0;
 
     constructor() {
         this.statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
@@ -231,8 +232,14 @@ export class VSCodeJetBrainsSync {
             try {
                 // Only send updates if we're active
                 if (this.isActive) {
-                    console.log('Sending state update (VSCode is active):', state);
-                    this.jetbrainsClient.send(JSON.stringify(state));
+                    const now = Date.now();
+                    if (now - this.lastSendTime >= 1000) {
+                        console.log('Sending state update (VSCode is active - throttled):', state);
+                        this.jetbrainsClient.send(JSON.stringify(state));
+                        this.lastSendTime = now;
+                    } else {
+                        console.log('Skipping state update (VSCode is active - throttled)');
+                    }
                 } else {
                     console.log('Skipping state update (VSCode is not active)');
                 }
